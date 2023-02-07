@@ -1,0 +1,92 @@
+/* Transform */
+/* Transform adalah properti CSS3 yang memungkinkan kita dapat memanipulasi format visual dari elemen html. 
+> Untuk properti ini terdapat 2 jenis yaitu 2D dan 3D.
+> Transform properti ini masih tergolong properti yang masih dalam ekperimen jadi jika ingin kompetible kesemua web browser harus menggunakan vendor prefixes.
+> Properti ini memiliki fungsi atau value, seperti : 
+- scale : untuk memperbesar / memperkecil;
+- rotate : untuk memutar;
+- skew : untuk membuat conding /miring;
+- translate : untuk mengubah posisi;
+*/
+
+.bsatu,
+.bdua,
+.btiga,
+.bempat {
+  text-align: center;
+}
+
+.satu,
+.dua,
+.tiga,
+.empat,
+.lima,
+.enam,
+.tujuh,
+.delapan {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  margin: 10px;
+  display: inline-block;
+  transition: 1s;
+}
+
+/* format penulisan transfrom value scale : 
+transfrom: scale(angka);
+transfrom: scale(angkaX, angkaY)*/
+
+.satu:hover {
+  transform: scale(1.5);
+}
+
+.dua:hover {
+  transform: scale(1.5, 2);
+}
+
+/* format penulisan transfrom value rotate : 
+transfrom: rotate(angel'deg');
+transfrom: rotateX(angel'deg') > berputar dengan sumbu pusat horizontal;
+transfrom: rotateY(angel'deg') > berputar dengan sumbu pusat vertical;*/
+
+.tiga:hover {
+  transform: rotate(180deg);
+}
+
+.empat:hover {
+  transform: rotateX(180deg);
+}
+
+.delapan:hover {
+  transform: rotateY(180deg);
+}
+
+/* format penulisan transfrom value skew : 
+transfrom: skew(angel'deg');
+transfrom: skewX(angel'deg');
+transfrom: skewY(angel'deg'); 
+untuk value skew sama dengan skewX karena defaultnya menggunakan sumbu horizontal*/
+
+.lima:hover {
+  transform: skewX(10deg);
+}
+
+.enam:hover {
+  transform: skewY(10deg);
+}
+
+/* format penulisan transfrom value translate : 
+transfrom: translate(angkaX, angkaY)
+value ini seperti pada properti posistion: relative, absolute yang memiliki layer/dimensi lain dari elemen lainnya. itu sebebnya saat dia bergeser/berpindah tidak mengganggu elemen yang lain. penggunaan properti ini lebih baik untuk performance dari pada properti posisition karena properti ini membacanya dengan menggandalkan GPU dari sistem komputer*/
+
+.tujuh:hover {
+  transform: translate(10px, 100px);
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.6em;
+  text-align: justify;
+  margin: 10px 200px;
+}

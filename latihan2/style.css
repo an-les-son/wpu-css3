@@ -1,0 +1,31 @@
+/* opacity */
+/* opacity merupakan properti yang digunakan untuk membuat transparant pada elemen */
+/* opacity bersifat mewariskan dari parent/pembungkusnya, contoh : 
+jika parentnya transparan child/yang dibungkus tidak akan bisa menjadi solid/tidak transparan */
+/* penulisan value pada properti opactiy
+dari 0 - 1
+0 = hilang 
+1 = solid
+jika menurut 0.5 bisa juga di tulis .5 tidak perlu menulis 0 di depan titik */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(./img/checkerboard-cross.png);
+}
+
+.background {
+  width: 400px;
+  height: 400px;
+  background-color: aquamarine;
+  margin: 50px auto;
+  padding: 150px;
+  box-sizing: border-box;
+  opacity: 0.5;
+}
+
+.kotak {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}

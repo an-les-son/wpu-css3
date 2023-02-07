@@ -1,0 +1,45 @@
+/* cara standart menggunakan font dari luar */
+/* ialah trick untuk menggunakan jenis font dari luar contohnya disini saya menggunakan font dari font-google,
+caranya meletakan link-font yang diberikan google ke bagian head pada html,
+dan meletakkan "CSS rules to specity families" yang disediakan font-google di bagian CSS */
+/* jika mengambil atau meletakkan link font dibagian head pada html di pastikan terhubung jaringan internet */
+
+/* @font-face */
+/* ialah trick untuk menggunakan jenis font dari luar contohnya disini saya menggunakan font dari font-google,
+caranya download terlebih dahulu, lalu file fontnya baiknya diletakan 1 folder dengan file html dan css'y, lalu gunakan properti @font-face untuk memasukan font dari luar ke dalam*/
+
+/* untuk pengambilan font dari luar disarankan untuk  mengambil yang berformat woff/woff2  dikarena woff dibuat khusus untuk website dan ketika me-load/pembacaan-nya lebih cepat daripada jenis format font yang lain*/
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url(./fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf) format(truetype);
+  src: url(./fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: "josefin_sansthin";
+  src: url(./fonts/Josefin_Sans/josefinsans-variablefont_wght-webfont.woff2) format("woff2"), url(./fonts/Josefin_Sans/josefinsans-variablefont_wght-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "josefin_sansthin", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 75px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+p {
+  width: 80%;
+  margin: 50px auto;
+  text-align: justify;
+  text-indent: 50px;
+  line-height: 1.2em;
+  font-weight: bold;
+}

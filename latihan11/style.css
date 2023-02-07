@@ -1,0 +1,69 @@
+/* Transition */
+/* Transition adalah properti yang memungkinkan kita dapat mengubah nilai dari properti html secara halus.
+> dialam CSS ada 2 properti yang fungsinya sama untuk mengubah nilai properti hrml secara halus yaitu transition dan animation
+> transition adalah waktu perubahan dari keadaan awal dan akhir, dan yang membedakan dengan animasi adalah jika transition hanya memiliki 2 nilai yaitu keadaan awal dan akhir, jika animasi memiliki lebih dari 2 nilai dan dapat berubah dalam 1 waktu atau 1 perintah.
+> penulisan transition : 
+transition: <property> <durasi> <fungsi> <delay>;
+di properti transition terdapat 4 value, dan yang wajib di isi adalah velue <durasi> : 
+- properti : jika value ini dituliskan nanti sistem hanya akan menjalankan properti yang di tuliskan saja;
+- durasi : lama waktu transisi;
+- fungsi : jenis pergerakan saat transisi, disini terdapat banyak fungsi seperti : ease, ease-in, ease-out, ease-in-out, linear, cubic-bezier(w,x,y,z);
+- delay : untuk mendelay transisi*/
+
+.container {
+  width: 900px;
+  height: 1000px;
+  border: 1px solid black;
+  margin: 200px auto;
+}
+
+.kotak {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+}
+
+.kotaka {
+  transition: 3s;
+}
+
+.kotakb {
+  transition: transform 3s;
+}
+
+.kotakc {
+  transition: all 3s ease;
+}
+
+.kotakd {
+  transition: all 3s ease-in;
+}
+
+.kotake {
+  transition: all 3s ease-out;
+}
+
+.kotakf {
+  transition: all 3s ease-in-out;
+}
+
+.kotakg {
+  transition: all 3s linear;
+}
+
+.kotakh {
+  transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.kotaki {
+  transition: all 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 3s;
+}
+
+.kotakj {
+  transition: transform 3s, background-color 3s 3s;
+}
+
+.container:hover .kotak {
+  transform: translateX(800px) rotate(360deg);
+  background-color: rgb(252, 116, 252);
+}

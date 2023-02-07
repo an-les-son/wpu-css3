@@ -1,0 +1,112 @@
+/* gradients */
+/* merupakan value dari properti background, background-image yang di gunakan untuk membuat efek gradasi warna, ada 2 tipe value gradients, yaitu : 
+- linear-gradient : memberikan gradasi warna secara garis lurus 
+- radial-gradient : memberikan gradasi warna secara melingkar*/
+
+/* cara penulisan : 
+backgound-image : linear-gardient(<warna awal>,..., <warna akhir>);
+backgound-image : linear-gardient(blue,white);
+sistem membaca background-image mempunyai warna gradasi dari bagian atas/warna awal biru dan bagian bawah/warna akhir putih.
+
+pemberian warna dapat lebih dari 2, dengan menuliskan warna dibagian kurung khusus warna, seperti backgound-image : linear-gardient(blue,red,,yellow,white);*/
+
+.satu {
+  width: 600px;
+  height: 100px;
+  margin: 50px auto;
+  background-image: linear-gradient(blue, white);
+}
+
+/* untuk mengatur arah granasi bisa menggunakan velue <sudut> atau <arah>, contoh : 
+- sudut : 90deg > yang artinya 90 derajat 
+- arah : 
+to top > dari bawah ke atas,
+to bottom > dari atas ke bawah,
+to left > dari kanan ke kiri,
+to right > dari kiri ke kanan,
+to right top > dari kiri bawah ke kanan atas (diagonal),
+to left top> dari kanan bawah ke kiri atas (diagonal),
+to right bottom > dari atas kiri ke kanan bawah (diagonal),
+to left bottom> dari atas kanan ke kiri bawah (diagonal)*/
+/* penulisannya : 
+- backgroud-image : linear-gradient(90deg,blue,white);
+- backgroud-image : linear-gradient(to right,blue,white);*/
+
+.dua {
+  width: 600px;
+  height: 100px;
+  margin: 50px auto;
+  background-image: linear-gradient(-45deg, blue, white);
+}
+
+.tiga {
+  width: 600px;
+  height: 100px;
+  margin: 50px auto;
+  background-image: linear-gradient(to right, blue, white);
+}
+
+/* color stop */
+/* value dari liner-gradient yang digunakan untuk mengatur bobot gradasi warnanya satuannya percent 1% - 99% semakin dekat bobot gradasi warnanya semakin pendek perpindakan warnanya.
+penulisannya : 
+backgroud-image : linear-gradient(to right,blue 60%,white 90%);*/
+
+.empat {
+  width: 600px;
+  height: 100px;
+  margin: 50px auto;
+  background-image: linear-gradient(to right, blue 10%, white 50%);
+}
+
+/* radial-gradient untuk cara penulisannya sama dengan linear-gradient hanya saja di bergradasi melingkar tidak garis lurus seperti linear-gradient */
+
+.lima {
+  width: 600px;
+  height: 100px;
+  margin: 50px auto;
+  background-image: radial-gradient(white, blue);
+}
+
+.enam {
+  width: 600px;
+  height: 100px;
+  margin: 50px auto;
+  background-image: radial-gradient(blue 60%, white 90%);
+}
+
+/* radial-gradient memiliki tipe, yaitu : 
+- ellipse : berbentuk ellipse
+- circle : berbentuk lingkaran
+jika, tipenya tidak dituliskan sistem secara defaut akan bertipe ellipse.*/
+
+.tujuh {
+  width: 600px;
+  height: 100px;
+  margin: 50px auto;
+  background-image: radial-gradient(circle, white, blue);
+}
+
+/* radial-gradient memiliki value jangkaun yang digunakan untuk mengatur jarak dari pusat/titik gradasi ke sisi terluarnya, yaitu :
+- closest-cornet > jarak dari pusat gradasi ke sudut terdekat;
+- closest-side > jarak dari pusat gradasi ke sisi terdekat;
+- farthest-corner > jarak dari pusat gradasi ke sudut terjauh;
+- farthest-side > jarak dari pusat gradasi ke sisi terjauh */
+
+/* radial-gradient juga memiliki value untuk pengaturan posisi pusat/titik gradasi, dengan satuan : 
+- posisi-y > top, center, bottom, px;
+- posisi-x > left,  center, right, px.
+jika, tidak diatur default posisi pusat/titik gradasi berada di tengah/center antara posisi y dan x*/
+
+.delapan {
+  width: 600px;
+  height: 400px;
+  margin: 50px auto;
+  background-image: radial-gradient(circle farthest-side at top left, white, blue);
+}
+
+.sembilan {
+  width: 600px;
+  height: 400px;
+  margin: 50px auto;
+  background-image: radial-gradient(circle farthest-corner at top left, white, blue);
+}

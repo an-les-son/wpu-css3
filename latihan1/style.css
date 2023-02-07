@@ -1,0 +1,99 @@
+/* border-radius ialah properti css3 yang digunakan untuk membuat sudut objek menjadi tumpul tidak lancip
+untuk membuat seperti lingkaran pengaturan border-radiusnya 50% dari width dan height-nya ini berlaku hanya untuk yang berbetuk persegi (width dan height-nya sama).
+border-radius juga bisa hanya memberi sudut secara spesifik, bisa menggunakan properti :
+- border-top-right-radius : untuk radius kanan atas
+- border-top-left-radius : untuk radius kiri atas
+- border-bottom-right-radius : untuk radius kanan bawah
+- border-bottom-left-radius : untuk radius kiri bawah
+penulisan singkat untuk 4 sudut yang berbeda : 
+border-radius : 0 30% 10% 5% 
+sistem membaca, border-radius : kiri-atas 0, kanan-atas 30%, kanan-bawah 10%, kiri-bawah 5%*/
+
+.radius {
+  width: 100px;
+  height: 100px;
+  background-image: url(../../3.\ CSS\ Layouting/latihan9/img/penulis.JPG);
+  background-size: cover;
+  border-radius: 50%;
+  margin: 50px auto;
+  border: 5px solid aqua;
+}
+
+.latar {
+  width: 810px;
+  height: 100px;
+  background-color: white;
+  margin: 100px auto;
+}
+
+.satu {
+  width: 100px;
+  height: 100px;
+  border: 5px solid aqua;
+  border-radius: 10%;
+  float: left;
+  margin-left: 30px;
+  box-sizing: border-box;
+}
+
+.dua {
+  width: 100px;
+  height: 100px;
+  border: 5px solid aqua;
+  border-radius: 45% 0 45% 0;
+  float: left;
+  margin-left: 30px;
+  box-sizing: border-box;
+}
+
+.tiga {
+  width: 100px;
+  height: 100px;
+  border: 5px solid aqua;
+  border-radius: 50%;
+  float: left;
+  margin-left: 30px;
+  box-sizing: border-box;
+}
+
+.empat {
+  width: 100px;
+  height: 50px;
+  border: 5px solid aqua;
+  border-radius: 50px 50px 0 0;
+  float: left;
+  margin-left: 30px;
+  box-sizing: border-box;
+}
+
+.lima {
+  width: 100px;
+  height: 50px;
+  border: 5px solid aqua;
+  border-radius: 0 0 50px 50px;
+  float: left;
+  margin-top: 55px;
+  margin-left: 30px;
+  box-sizing: border-box;
+}
+
+.enam {
+  width: 100px;
+  height: 100px;
+  border: 5px solid aqua;
+  border-radius: 10% 50% 50% 10%;
+  float: left;
+  margin-left: 30px;
+  box-sizing: border-box;
+}
+
+.clear {
+  clear: left;
+}
+
+.ket {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  text-align: justify;
+}

@@ -1,0 +1,78 @@
+/* Filter */
+/* filter murapakan properti CSS3 yang digunakan untuk memberikan efek visual pada gambar, background, atau border.
+filter merupakan properti CSS3 yang memerlukan vendor-prefixes agar dapat kompetible ke semua browser*/
+/* bebera value dari properti filer : 
+- blur;
+- brightness;
+- contrast; 
+- saturate;
+- grayscale;
+- sepia;
+- hue-rotate;
+- invert;
+- opacity;
+- drop-shadow */
+
+/* object-fit : properti yang digunakan untuk mengatur fit pada suatu element gambar */
+
+body {
+  background-image: url(./img/download.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div {
+  margin-top: 150px;
+  text-align: center;
+}
+
+.bawah {
+  margin-top: 0;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  padding: 3px;
+}
+
+.satu {
+  filter: blur(5px);
+}
+
+.dua {
+  filter: brightness(100%);
+}
+
+.tiga {
+  filter: contrast(50%);
+}
+
+.empat {
+  filter: saturate(50%);
+}
+
+.lima {
+  filter: grayscale(100%);
+}
+
+.enam {
+  filter: sepia(100%);
+}
+
+.tujuh {
+  filter: hue-rotate(45deg);
+}
+
+.delapan {
+  filter: invert(100%);
+}
+
+.sembilan {
+  filter: opacity(50%);
+}
+
+.sepuluh {
+  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+}

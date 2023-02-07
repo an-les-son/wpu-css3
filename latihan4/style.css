@@ -1,0 +1,69 @@
+/* box-shadow */
+/* merupakan properti yang ada di CSS3 digunakan untuk membuat efek bayangan pada elemen.
+box-shadow memiliki value : 
+- x-offset : untuk mengatur posisi kanan-kiri ( nilai - akan kekiri, nilai tanpa - akan kekanan, satuannya pixel px;
+- y-offset : untuk mengatur posisi atas-bawah (nilai - akan keatas, nilai tanpa - akan kebawah, satuannya pixel px;
+- blur : untuk mengatur tingkat blur, satuannya pixel px;
+- color : untuk mengatur warna.
+cara penulisan : 
+box-shadow : 10px 10px 10px rgba (0,0,0,0.5)
+sistem CSS3 akan membaca,
+box-shadow : kekanan 10px kebawah 10px blur 10px dan warna hitam dengan tingakat transparan 0.5*/
+
+.latar {
+  width: 800px;
+  height: 800px;
+  margin: 150px auto;
+}
+
+.satu {
+  width: 100px;
+  height: 100px;
+  background-color: greenyellow;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  float: left;
+  margin: 0 0 0 50px;
+}
+
+/* box-shadow juga memiliki value 2 opsional seperti :
+- spread : untuk menambahkan ukuran dari bayangan, penulisannya terletak setelah nilai <blur> sebelum <color>, satuannya pixel px;;
+box-shadow : 10px 10px 10px "10px" rgba (0,0,0,0.5)- inset : untuk membuat bayangan berada di dalam elemen, penulisannya berada di depan sebelum <x-offset> */
+
+.dua {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(47, 154, 255);
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+  float: left;
+  margin: 0 0 0 50px;
+}
+
+.tiga {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(47, 241, 255);
+  box-shadow: inset 0 0 5px 5px rgba(0, 0, 0, 0.2);
+  float: left;
+  margin: 0 0 0 50px;
+}
+
+/* efek box-shadow juga dapat digunakan lebih dari 1 untuk 1 elemen */
+
+.empat {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(231, 128, 252);
+  box-shadow: inset 0 0 5px 5px rgba(0, 0, 0, 0.2), 10px 10px 10px rgba(0, 0, 0, 0.2);
+  float: left;
+  margin: 0 0 0 50px;
+}
+
+.lima {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  box-shadow: 0 0 0 15px white, 0 0 0 30px green;
+  border-radius: 50px;
+  float: left;
+  margin: 30px 0 0 80px;
+}

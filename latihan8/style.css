@@ -1,0 +1,21 @@
+/* vendor prefixes */
+/* digunakan untuk CSS3 dapat kompetible dengan semua web browser , contohnya : 
+- -webkit- chrome, safari, opera versi terbaru;
+- -moz- firefox;
+- -ms- internet explorer;
+- -o- opera versi terdahulu*/
+
+body {
+  text-align: center;
+}
+
+img {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+}
+
+/* untuk mengetahui property CSS3 mana saja yang harus diberi prefixes, untuk dapat melihat infomarsinya bisa kunjungi web : 
+- shouldiprefix.com;
+- caniuse.com;
+- pleeease.id/play/;
+- menggunakan plugin "emmet" di code editor;*/

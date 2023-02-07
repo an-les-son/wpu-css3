@@ -1,0 +1,18 @@
+/* text-shadow */
+/* text-shadow ialah properti yang fungsinya sama seperti box-shadow untuk memberi efek bayangan pada text kalau box-shadow untuk element berupa bagun ruang,
+dan untuk value text-shadow juga sama dengan box-shadow, yaitu : 
+- x-offset, - y-offset, - blur, dan - color
+hanya saja bedanya dia tidak memiliki value opsional seperti - inset dan - spred yang ada di box-shadow  */
+/* untuk cara penulisannya juga sama dengan box-shadow, contohnya : 
+text-shadow : 10px 10px 10px rgba(0,0,0,0.5),
+yang dibaca oleh sistem CSS ialah text mempunyai bayangan kekanan 10px kebawah 10px tingkat blur 10px dan memiliki warna hitam dengan tingkat transparan 0.5*/
+/* dan text-shadow juga bisa digunakan lebih dari 1 shadow untuk 1 text */
+
+h1 {
+  font-size: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+  color: white;
+  text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+}

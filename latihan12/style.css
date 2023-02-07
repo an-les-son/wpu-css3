@@ -1,0 +1,92 @@
+/* Animation */
+/* animation adalah sebuat properti CSS yang fungsinya sama seperti properti Transition hanya bedanya animasi memiliki lebih dari 2 keadaaan tidak seperti Transition */
+/* untuk animasi harus membuat keyframes dlu, dan keyframes adalah sebuah frame atau variasi/tumpukan/layer perubahan dari 2 atau lebih elemen*/
+/* perbedaan transisi dengan animasi, animasi jika keadaan sudah mencapai keadaan perubahannya dia akan langsung berubah ke keadaan awal tanpa harus kursor berpindah dari atas elemen jika menggunakan hover */
+
+@keyframes animasiKotak {
+  from {
+    width: 100px;
+    /* merupakan keadaan awal (frame pertama) */
+  }
+
+  to {
+    width: 500px;
+    /* merupakan keadaan ke-2/perubahan (frame kedua) */
+  }
+}
+
+@keyframes animasiKotak2 {
+  0% {
+    width: 100px;
+  }
+
+  30% {
+    width: 500px;
+    height: 200px;
+  }
+
+  70% {
+    width: 1000px;
+    height: 150px;
+  }
+
+  100% {
+    width: 200px;
+    height: 100px;
+  }
+}
+
+/* untuk penggunakan frame/keadaan lebih dari 2 di keyframe bisa menggunakan angka % untuk menamakan urutan frame */
+
+.kotak,
+.kotak2 {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  margin: 50px;
+}
+
+.kotak:hover {
+  animation: animasiKotak 3s ease;
+}
+
+.kotak2:hover {
+  animation: animasiKotak2 5s ease;
+}
+
+.kotak3 {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  margin: 50px;
+  animation: animasiKotak2 5s ease infinite;
+}
+
+/* ada beberapa value dalam properti animation, yaitu : 
+- name : nama animasi yang di berikan di @keyframe
+- duration : durasi 1 kali putaran untuk membaca berubahan semua frame
+- timing-function : gaya perubahan/transisi (ease...dll)
+- delay : waktu penunda membaca frame
+- iteration-count : di pergukan untuk berapa kali membaca animasi, jika di isi "4" dia akan mengulang sebanyak 4 kali, dan jika di isi "infinite" dia akan ngeluang terus menerus dan tidak akan berhenti
+- direction : gaya dalam membaca animasi, normal (membaca secara normal dari awal sampai akhir frame), reverse (membaca dari frame akhir ke frame awal), alternate(membaca bolak balik, dari awal ke akhir dan akhir ke awal), alternate-reverse (membaca bolak balik, dari akhir ke awal dan awal ke akhir
+- fill-mode : untuk memilih perubahaan keadaan akhir, none (normal/default), forwards (akan berhenti di perubahan frame akhir), backwards(seperti normal), both (seperti forward)
+- play-state : digunakan untuk menjalankan atau menghentikan, running (animasi berjalan/default), paused (animasi berhenti, bisanya digunakan saat memiliki tombol pause untuk menghentikan animasi)*/
+
+.kotak4 {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  margin: 50px;
+  animation: animasiKotak2 5s ease infinite reverse;
+}
+
+.kotak5 {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  margin: 50px;
+  animation: animasiKotak2 5s ease forwards;
+}
+
+/* cara singkat penulisan animasi : 
+animasi : <name-animasi> <duration> <timing-function> <delay> <iteration-count> <direction> <fill-mode> <play-state>*/

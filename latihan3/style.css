@@ -1,0 +1,30 @@
+/* RGBa dan HSLa */
+/* RGBa : Red Green Blue alpha
+merupakan value color untuk membuat warna dan "alpha" digunakan untuk efek transparan. */
+/* HSLa : Hue Saturation Lightness alpha
+merupakan value color untuk membuat warna dan "alpha" digunakan untuk efek transparan.*/
+/* ini digunakan untuk mengakali jika ingin membuat elemen dan parent/pembungkusnya memilih tingkat opacity/transparan yang berbeda, karena disini membuat transparan dari sisi warnanya, jika menggunakan properti opacity membuat transparan dari sisi elemennya.
+jadi disini bisa parent/pembungkusnya solid terapi child/elemen yang dibungkus transparan */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(./img/checkerboard-cross.png);
+}
+
+.background {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(127, 255, 212, 1);
+  margin: 50px auto;
+  position: relative;
+}
+
+.kotak {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 192, 203, 0.5);
+  position: absolute;
+  top: 350px;
+  left: 350px;
+}
